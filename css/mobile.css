@@ -1,0 +1,173 @@
+/* ============================================
+   Mobile Overrides (max-width: 768px)
+   ============================================ */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background: rgba(250, 248, 245, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--color-border);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition);
+  }
+
+  .nav-menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+
+  /* 透明 nav 在手機展開選單時：半透明黑 frosted glass */
+  .nav-transparent .nav-menu {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .nav-transparent .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .nav-transparent .nav-link:hover,
+  .nav-transparent .nav-link.active {
+    color: var(--color-white);
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .hero-names {
+    font-size: 2rem;
+  }
+
+  .countdown {
+    gap: 16px;
+  }
+
+  .countdown-number {
+    font-size: 1.75rem;
+  }
+
+  .info-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .info-hero-times {
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+    padding: 32px 20px;
+  }
+
+  .info-hero-actions {
+    flex-direction: column;
+  }
+
+  .info-hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .info-time-hour {
+    font-size: 2rem;
+  }
+
+  .info-time-hour--small {
+    font-size: 1.1rem;
+  }
+
+  .section-hint {
+    display: block;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--color-text-light);
+  }
+
+  .gallery-arrow {
+    display: none;
+  }
+
+  .gallery-swiper .swiper-slide {
+    height: 350px;
+  }
+
+  /* Story: collapse zigzag to vertical stack */
+  .story-timeline::before {
+    display: none;
+  }
+
+  .story-item {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .story-item::before {
+    display: none;
+  }
+
+  .story-item:nth-child(odd) .story-img,
+  .story-item:nth-child(even) .story-img {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: center;
+    max-width: 100%;
+  }
+
+  .story-item:nth-child(odd) .story-content,
+  .story-item:nth-child(even) .story-content {
+    grid-column: 1;
+    grid-row: auto;
+    text-align: center;
+    padding: 0;
+  }
+
+  .footer-row {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* ============================================
+   Small Mobile (max-width: 480px)
+   ============================================ */
+@media (max-width: 480px) {
+  .hero-names {
+    font-size: 1.75rem;
+    letter-spacing: 2px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+  }
+
+  .countdown-number {
+    font-size: 1.5rem;
+  }
+
+  .countdown {
+    gap: 12px;
+  }
+}

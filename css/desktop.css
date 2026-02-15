@@ -1,0 +1,145 @@
+/* ============================================
+   Desktop Enhancements (min-width: 1024px)
+   Override CSS variables → all components
+   using those variables auto-scale.
+   ============================================ */
+@media (min-width: 1024px) {
+
+  /* ---- Shared: override tokens ---- */
+  :root {
+    --container-width: 1400px;
+    --section-padding: 72px;
+    --section-title-size: 2.5rem;
+    --nav-height: 72px;
+  }
+
+  .section-title {
+    margin-bottom: 48px;
+  }
+
+  /* ---- Header / Nav ---- */
+  .nav {
+    padding: 0 56px;
+  }
+
+  .nav-brand {
+    font-size: 1.5rem;
+  }
+
+  .nav-menu {
+    gap: 12px;
+  }
+
+  .nav-link {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  /* ---- Footer ---- */
+  .footer {
+    padding: 72px 48px;
+  }
+
+  .footer-row {
+    gap: 96px;
+    margin-bottom: 36px;
+  }
+
+  .footer-content p {
+    font-size: 1rem;
+  }
+
+  .footer-links {
+    gap: 32px;
+    margin-top: 16px;
+  }
+
+  .footer-link {
+    font-size: 1rem;
+  }
+
+  .footer-qr {
+    width: 180px;
+    height: 180px;
+  }
+
+  .footer-line-text {
+    font-size: 0.95rem;
+  }
+
+  .upload-cta {
+    padding: 64px 48px;
+  }
+
+  .upload-cta h3 {
+    font-size: 2rem;
+  }
+
+  .upload-cta p {
+    font-size: 1.05rem;
+  }
+
+  .footer-copy {
+    font-size: 0.9rem;
+    margin-top: 32px;
+  }
+
+  /* ---- Info: editorial hero ---- */
+  .info-hero { min-height: 540px; }
+
+  .info-hero-photo img { height: 100%; }
+  .info-hero-times { padding: 56px; }
+  .info-venue { margin-bottom: 40px; padding-bottom: 40px; }
+  .info-venue-name { font-size: 2rem; }
+  .info-time-hour { font-size: 3.5rem; }
+  .info-time-hour--small { font-size: 1.5rem; }
+  .info-time-block { margin-bottom: 32px; }
+  .info-time-label { font-size: 0.85rem; }
+
+  /* ---- Info: map ---- */
+  .page-info .map-container iframe { height: 450px; }
+  .info-actions { margin-top: 32px; gap: 16px; }
+
+  /* ---- Info: timeline ---- */
+  .timeline { max-width: 900px; padding-left: 56px; }
+  .timeline::before { left: 20px; }
+  .timeline-item { gap: 32px; padding-bottom: 48px; }
+  .timeline-item::before { left: -44px; top: 6px; width: 16px; height: 16px; }
+  .timeline-time { font-size: 1.5rem; min-width: 65px; }
+  .timeline-content h3 { font-size: 1.25rem; margin-bottom: 8px; }
+  .timeline-content p { font-size: 1rem; }
+
+  /* ---- Info: FAQ ---- */
+  .faq { max-width: 1050px; }
+  .faq-question { padding: 24px 0; font-size: 1.1rem; }
+  .faq-answer p { font-size: 1rem; }
+
+  /* ---- Story: timeline ---- */
+  .story-timeline { max-width: 1300px; }
+  .story-item { grid-template-columns: 1fr 80px 1fr; margin-bottom: 72px; }
+  .story-item::before { width: 20px; height: 20px; }
+  .story-item:nth-child(odd) .story-content { padding-left: 40px; }
+  .story-item:nth-child(even) .story-content { padding-right: 40px; }
+  .story-img { max-width: 480px; }
+  .story-date { font-size: 1.1rem; margin-bottom: 12px; }
+  .story-content h3 { font-size: 2.2rem; margin-bottom: 16px; }
+  .story-content p { font-size: 1.1rem; }
+
+  /* ---- Story: video ---- */
+  .video-container { max-width: 1200px; }
+  .video-placeholder { padding: 120px 24px; }
+  .video-placeholder-icon { font-size: 4rem; }
+  .video-placeholder p { font-size: 1.3rem; }
+
+  /* ---- Story: gallery ---- */
+  .gallery-mobile { display: none; } /* hide Swiper on desktop */
+
+  .photo-wall {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+}
